@@ -4,6 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import model.entities.Account;
+import model.exceptions.DomainException;
 
 public class Program {
 
@@ -32,10 +33,10 @@ public class Program {
 			
 			account.withdraw(amount);
 			
-			account.toString();
+			System.out.println(account);
 			
 		}
-		catch(IllegalArgumentException e){
+		catch(DomainException e){
 			System.out.println("Withdraw erro: " + e.getMessage());
 		}
 		
